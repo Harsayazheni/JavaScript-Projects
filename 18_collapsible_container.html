@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collapsible Container</title>
+    <style>
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .toggle {
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle" onclick="toggleContent()">Toggle Content</div>
+    <div class="content" id="content">
+        This is the collapsible content that can be shown or hidden.
+    </div>
+
+    <script>
+        function toggleContent() {
+            const content = document.getElementById("content");
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

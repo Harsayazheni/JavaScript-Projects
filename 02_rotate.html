@@ -1,0 +1,14 @@
+<input type="text" id="rotateString" placeholder="Enter string">
+<button onclick="rotateString()">Rotate</button>
+<div id="rotationResult"></div>
+
+<script>
+function rotateString() {
+  const str = document.getElementById('rotateString').value;
+  let rotations = [];
+  for (let i = 0; i < str.length; i++) {
+    rotations.push(str.slice(i) + str.slice(0, i));
+  }
+  document.getElementById('rotationResult').innerText = rotations.join(', ');
+}
+</script>

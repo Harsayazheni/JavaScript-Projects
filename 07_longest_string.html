@@ -1,0 +1,11 @@
+<input type="text" id="longestArray" placeholder="Enter strings separated by commas">
+<button onclick="findLongestString()">Find Longest</button>
+<div id="longestStringResult"></div>
+
+<script>
+function findLongestString() {
+  const arr = document.getElementById('longestArray').value.split(',');
+  const longest = arr.reduce((a, b) => a.length >= b.length ? a : b);
+  document.getElementById('longestStringResult').innerText = `Longest String: ${longest}`;
+}
+</script>

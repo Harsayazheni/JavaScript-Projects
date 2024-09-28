@@ -1,0 +1,17 @@
+<input type="number" id="pyramidInput" placeholder="Enter number of rows">
+<button onclick="constructPyramid()">Generate Pyramid</button>
+<div id="pyramidResult"></div>
+
+<script>
+function constructPyramid() {
+  const n = parseInt(document.getElementById('pyramidInput').value);
+  let pyramid = '';
+  for (let i = 1; i <= n; i++) {
+    pyramid += ' '.repeat(n - i) + '*'.repeat(2 * i - 1) + '<br>';
+  }
+  for (let i = n - 1; i >= 1; i--) {
+    pyramid += ' '.repeat(n - i) + '*'.repeat(2 * i - 1) + '<br>';
+  }
+  document.getElementById('pyramidResult').innerHTML = pyramid;
+}
+</script>

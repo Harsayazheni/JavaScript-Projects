@@ -1,0 +1,12 @@
+<div id="container">
+  <p>This is a div.</p>
+</div>
+<button onclick="duplicateDiv()">Duplicate</button>
+
+<script>
+function duplicateDiv() {
+  const container = document.getElementById('container');
+  const newDiv = container.cloneNode(true);
+  document.body.appendChild(newDiv);
+}
+</script>

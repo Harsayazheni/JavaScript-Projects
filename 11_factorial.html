@@ -1,0 +1,14 @@
+<input type="number" id="factorialInput" placeholder="Enter number">
+<button onclick="calculateFactorial()">Calculate Factorial</button>
+<div id="factorialResult"></div>
+
+<script>
+function calculateFactorial() {
+  const n = parseInt(document.getElementById('factorialInput').value);
+  let factorial = 1;
+  for (let i = 1; i <= n; i++) {
+    factorial *= i;
+  }
+  document.getElementById('factorialResult').innerText = `Factorial: ${factorial}`;
+}
+</script>

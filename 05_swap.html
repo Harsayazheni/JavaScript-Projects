@@ -1,0 +1,13 @@
+<input type="text" id="arrayInput" placeholder="Enter numbers separated by commas">
+<button onclick="swapFirstLast()">Swap First and Last</button>
+<div id="swapResult"></div>
+
+<script>
+function swapFirstLast() {
+  const arr = document.getElementById('arrayInput').value.split(',').map(Number);
+  if (arr.length > 1) {
+    [arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
+  }
+  document.getElementById('swapResult').innerText = arr.join(', ');
+}
+</script>

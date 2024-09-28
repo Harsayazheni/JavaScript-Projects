@@ -1,0 +1,11 @@
+<input type="text" id="palindromeInput" placeholder="Enter string">
+<button onclick="checkPalindrome()">Check Palindrome</button>
+<div id="palindromeResult"></div>
+
+<script>
+function checkPalindrome() {
+  const str = document.getElementById('palindromeInput').value;
+  const isPalindrome = str === str.split('').reverse().join('');
+  document.getElementById('palindromeResult').innerText = isPalindrome ? 'Yes, it is a palindrome' : 'No, it is not a palindrome';
+}
+</script>

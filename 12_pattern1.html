@@ -1,0 +1,14 @@
+<input type="number" id="patternInput" placeholder="Enter total number">
+<button onclick="constructPattern()">Generate Pattern</button>
+<div id="patternResult"></div>
+
+<script>
+function constructPattern() {
+  const n = parseInt(document.getElementById('patternInput').value);
+  let pattern = '';
+  for (let i = 1; i <= n; i++) {
+    pattern += '^'.repeat(i) + '<br>';
+  }
+  document.getElementById('patternResult').innerHTML = pattern;
+}
+</script>

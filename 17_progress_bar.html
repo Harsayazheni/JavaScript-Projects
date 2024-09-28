@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress Bar</title>
+    <style>
+        #progressBar {
+            width: 100%;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+        }
+        #progress {
+            height: 30px;
+            width: 0;
+            background-color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="startProgress()">Start Progress</button>
+    <div id="progressBar">
+        <div id="progress"></div>
+    </div>
+
+    <script>
+        function startProgress() {
+            let width = 0;
+            const progress = document.getElementById("progress");
+            const interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progress.style.width = width + '%';
+                }
+            }, 100); // Adjust speed (100ms for each increment)
+        }
+    </script>
+</body>
+</html>
